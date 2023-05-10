@@ -20,3 +20,8 @@ ng update @angular/material@16 --force
 ng update @angular-eslint/builder @angular-eslint/schematics --force
 
 ```
+
+## tips
+
+- standaloneで何をimportsすればいいか困った時
+  - @angular/materialなら該当componentのAPIページにModule書いてある

@@ -8,6 +8,10 @@ const routes: Routes = [
     loadChildren: () => import('./hello-world/routes'),
   },
   {
+    path: 'signals',
+    loadChildren: () => import('./signals/routes'),
+  },
+  {
     path: '**',
     loadComponent: () => HomeIndexComponent,
   },

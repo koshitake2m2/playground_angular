@@ -1,3 +1,9 @@
-<p>home-index works!</p>
-
-<a [routerLink]="['/hello-world']">hello-world</a>
+<mat-card>
+    <mat-card-header>home-index works!</mat-card-header>
+    <mat-card-content>
+        <mat-list>
+            <mat-list-item><a [routerLink]="['/hello-world']">hello-world</a></mat-list-item>
+            <mat-list-item><a [routerLink]="['/signals']">signals</a></mat-list-item>
+        </mat-list>
+    </mat-card-content>
+</mat-card>
