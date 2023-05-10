@@ -10,3 +10,12 @@ ng new my-first-project
 ng g c --standalone home/home-index
 
 ```
+
+## update
+
+```bash
+
+ng update @angular/core@16 @angular/cli@16 --force
+ng update @angular/material@16 --force
+
+```
