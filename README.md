@@ -17,5 +17,6 @@ ng g c --standalone home/home-index
 
 ng update @angular/core@16 @angular/cli@16 --force
 ng update @angular/material@16 --force
+ng update @angular-eslint/builder @angular-eslint/schematics --force
 
 ```
