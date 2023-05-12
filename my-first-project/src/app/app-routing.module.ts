@@ -12,6 +12,10 @@ const routes: Routes = [
     loadChildren: () => import('./signals/routes'),
   },
   {
+    path: 'materials',
+    loadChildren: () => import('./materials/routes'),
+  },
+  {
     path: '**',
     loadComponent: () => HomeIndexComponent,
   },
