@@ -30,7 +30,9 @@
             "prefix": "app",
             "style": "kebab-case"
           }
-        ]
+        ],
+        "no-empty-function": "off",
+        "@typescript-eslint/no-empty-function": "off"
       }
     },
     {
@@ -40,7 +42,8 @@
       "extends": [
         "plugin:@angular-eslint/template/recommended"
       ],
-      "rules": {}
+      "rules": {
+      }
     }
   ]
 }

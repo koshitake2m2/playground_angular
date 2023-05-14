@@ -1,0 +1,14 @@
+<h1>child works!</h1>
+<h2>count</h2>
+<p>count: {{count}}</p>
+<button (click)="incrementCountByOutput.emit('world! @Output')">increment: @Output</button>
+<button (click)="incrementCountByInput('world! @Input')">increment: @Input</button>
+
+<h2>countState</h2>
+<p>countState: {{countState.state}}</p>
+<button (click)="incrementCountStateByOutput.emit()">increment: @Output</button>
+<button (click)="incrementCountStateByInput()">increment: @Input</button>
+
+<h2>multi args</h2>
+check console.log!!
+<button (click)="logMultiMessage.emit({ a: 'hello', b: 'world'})">logMultiMessage: @Output</button>

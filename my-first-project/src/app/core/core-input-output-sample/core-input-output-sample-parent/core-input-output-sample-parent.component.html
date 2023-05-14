@@ -1,0 +1,16 @@
+<h1>parent works!</h1>
+<p>parentCount: {{parentCount}}</p>
+ <button (click)="parentIncrementCount('hello')">increment</button>
+<p>parentCountState: {{parentCountState.state}}</p>
+ <button (click)="parentIncrementCountState()">increment</button>
+ <hr>
+<app-core-input-output-sample-child
+    [count]="parentCount"
+    [countState]="parentCountState"
+    [incrementCountByInput]="parentIncrementCount"
+    (incrementCountByOutput)="parentIncrementCount($event)"
+    (incrementCountStateByOutput)="parentIncrementCountState()"
+    [incrementCountStateByInput]="parentIncrementCountState"
+    (logMultiMessage)="parentLogMultiMessage($event)"
+ />
+

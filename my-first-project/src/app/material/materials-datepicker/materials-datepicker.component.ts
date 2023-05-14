@@ -19,7 +19,7 @@ import * as dayjs from 'dayjs';
 import * as customParseFormat from 'dayjs/plugin/customParseFormat';
 // dayjs.extend(customParseFormat);
 
-const MY_DATE_FORMATS: MatDateFormats = {
+const MY_DAYJS_DATE_FORMATS: MatDateFormats = {
   parse: {
     dateInput: 'YYYY/MM/DD',
     // dateInput: null,
@@ -33,7 +33,7 @@ const MY_DATE_FORMATS: MatDateFormats = {
   },
 };
 
-class MyDateAdapter extends NativeDateAdapter {
+class MyDayjsDateAdapter extends NativeDateAdapter {
   override getDateNames(): string[] {
     return super.getDateNames().map((dateNames) => dateNames.replace('日', ''));
   }
@@ -65,12 +65,12 @@ class MyDateAdapter extends NativeDateAdapter {
     {
       provide: DateAdapter,
       // useClass: NativeDateAdapter,
-      useClass: MyDateAdapter,
+      useClass: MyDayjsDateAdapter,
       deps: [MAT_DATE_LOCALE],
     },
     {
       provide: MAT_DATE_FORMATS,
-      useValue: MY_DATE_FORMATS,
+      useValue: MY_DAYJS_DATE_FORMATS,
       // useValue: MAT_NATIVE_DATE_FORMATS,
     },
   ],

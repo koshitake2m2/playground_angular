@@ -8,12 +8,12 @@ const routes: Routes = [
     loadChildren: () => import('./hello-world/routes'),
   },
   {
-    path: 'signals',
-    loadChildren: () => import('./signals/routes'),
+    path: 'core',
+    loadChildren: () => import('./core/routes'),
   },
   {
-    path: 'materials',
-    loadChildren: () => import('./materials/routes'),
+    path: 'material',
+    loadChildren: () => import('./material/routes'),
   },
   {
     path: '**',
