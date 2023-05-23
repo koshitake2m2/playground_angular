@@ -9,6 +9,11 @@ ng new my-first-project
 # スタンドアロンなコンポーネント作成
 ng g c --standalone home/home-index
 
+# マルチプロジェクト
+ng new my-workspace --no-create-application
+ng generate application my-first-app
+ng generate library my-lib
+
 ```
 
 ## update
