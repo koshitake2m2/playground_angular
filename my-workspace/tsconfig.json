@@ -13,7 +13,7 @@
     "sourceMap": true,
     "paths": {
       "my-lib1": [
-        "dist/my-lib1"
+        "dist/my-lib1",
       ]
     },
     "declaration": false,
