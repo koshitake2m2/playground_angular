@@ -5,6 +5,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 import HelloWorldRoutes from 'src/app/hello-world/routes';
 import CoreRoutes from 'src/app/core/routes';
+import CommonRoutes from 'src/app/common/routes';
 import MaterialRoutes from 'src/app/material/routes';
 
 interface MyRoute {
@@ -22,6 +23,7 @@ export class HomeIndexComponent {
   routesByParentPath: Map<string, Routes> = new Map([
     ['hello-world', HelloWorldRoutes],
     ['core', CoreRoutes],
+    ['common', CommonRoutes],
     ['material', MaterialRoutes],
   ]);
 

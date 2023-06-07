@@ -1,5 +1,11 @@
 # MyFirstProject
 
+# references
+- proxy周り
+  - [Angular 日本語ドキュメンテーション - Angularアプリケーションのビルドとサーブ](https://angular.jp/guide/build)
+
+# generated text
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.1.
 
 ## Development server

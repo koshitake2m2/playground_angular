@@ -1,0 +1,5 @@
+{
+    "/play-sample/api": {
+        "target": "http://localhost:9000"
+    }
+}

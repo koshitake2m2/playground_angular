@@ -12,13 +12,21 @@ const routes: Routes = [
     loadChildren: () => import('./core/routes'),
   },
   {
+    path: 'common',
+    loadChildren: () => import('./common/routes'),
+  },
+  {
     path: 'material',
     loadChildren: () => import('./material/routes'),
   },
   {
-    path: '**',
+    path: '',
     loadComponent: () => HomeIndexComponent,
   },
+  // {
+  //   path: '**',
+  //   loadComponent: () => HomeIndexComponent,
+  // },
 ];
 
 @NgModule({
