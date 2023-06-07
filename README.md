@@ -14,6 +14,9 @@ ng new my-workspace --no-create-application
 ng generate application my-first-app
 ng generate library my-lib
 
+# install
+pnpm i
+
 ```
 
 ## update
