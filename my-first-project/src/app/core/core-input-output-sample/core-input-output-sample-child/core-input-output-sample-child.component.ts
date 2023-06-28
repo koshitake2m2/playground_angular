@@ -1,4 +1,11 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import {
+  ChangeDetectorRef,
+  Component,
+  EventEmitter,
+  Input,
+  Output,
+  inject,
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -9,6 +16,7 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./core-input-output-sample-child.component.scss'],
 })
 export class CoreInputOutputSampleChildComponent {
+  cd = inject(ChangeDetectorRef);
   /**
    * count
    */
@@ -24,18 +32,35 @@ export class CoreInputOutputSampleChildComponent {
   @Input({ required: true })
   incrementCountByInput: (_: string) => void = () => {};
 
+  // 親は変更を検知できない.
+  // NOTE: アンチパターン. 子が親の状態を変更するんじゃない!
+  incrementCountByChild(): void {
+    this.count += 1;
+    // 以下をしても親は変更を検知しない
+    // this.cd.markForCheck();
+  }
+
   /**
    * countState
    */
   // NOTE: @Inputでオブジェクトは参照渡しになる
   @Input({ required: true })
   countState = { state: 0 };
+  get getCountState(): number {
+    return this.countState.state;
+  }
 
   @Output()
   incrementCountStateByOutput = new EventEmitter<never>();
 
   @Input({ required: true })
   incrementCountStateByInput: () => void = () => {};
+
+  // 親は変更を検知できる??
+  // NOTE: アンチパターン. 子が親の状態を変更するんじゃない!
+  incrementCountStateByChild(): void {
+    this.countState.state += 1;
+  }
 
   /**
    * multi args

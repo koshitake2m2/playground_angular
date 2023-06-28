@@ -20,7 +20,7 @@ export class CoreInputOutputSampleParentComponent {
   parentCountState = { state: 0 };
   parentIncrementCountState = () => {
     this.parentCountState.state += 1;
-    this.cd.markForCheck();
+    // this.cd.markForCheck();
   };
   parentLogMultiMessage = (args: { a: string; b: string }): void => {
     console.log(`message: a: ${args.a}, b: ${args.b}`);
