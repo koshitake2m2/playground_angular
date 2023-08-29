@@ -10,6 +10,7 @@ import {
   MAT_DATE_FORMATS,
   MAT_DATE_LOCALE,
   MAT_NATIVE_DATE_FORMATS,
+  MatCommonModule,
   // MAT_NATIVE_DATE_FORMATS,
   MatDateFormats,
   NativeDateAdapter,

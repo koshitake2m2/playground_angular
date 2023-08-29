@@ -1,4 +1,17 @@
 <p>http-file-sample001 works!</p>
+<h1>download</h1>
 <button type="button" (click)="download1()">download1</button>
 <button type="button" (click)="download2()">download2</button>
 <button type="button" (click)="download3()">download3</button>
+
+<hr>
+<h1>upload</h1>
+
+<input type="file" (change)="onChangeFile($event)" />
+<button type="button" (click)="uploadFile()">upload</button>
+
+<hr>
+<h1>s3</h1>
+<input type="file" (change)="onChangeS3File($event)" />
+<button type="button" (click)="uploadS3File()">upload</button>
+<button type="button" (click)="downloadS3File()">download</button>

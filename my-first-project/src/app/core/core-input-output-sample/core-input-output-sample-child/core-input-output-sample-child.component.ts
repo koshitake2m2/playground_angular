@@ -57,7 +57,7 @@ export class CoreInputOutputSampleChildComponent {
   incrementCountStateByInput: () => void = () => {};
 
   // 親は変更を検知できる??
-  // NOTE: アンチパターン. 子が親の状態を変更するんじゃない!
+  // NOTE: アンチパターン. 子が親の状態を変更するんじゃない! とはいえ, 状態管理の問題なので認知できればok
   incrementCountStateByChild(): void {
     this.countState.state += 1;
   }
