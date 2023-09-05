@@ -8,6 +8,10 @@ const routes: Routes = [
     loadChildren: () => import('./hello-world/routes'),
   },
   {
+    path: 'examples',
+    loadChildren: () => import('./examples/routes'),
+  },
+  {
     path: 'core',
     loadChildren: () => import('./core/routes'),
   },

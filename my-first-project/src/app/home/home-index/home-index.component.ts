@@ -7,6 +7,7 @@ import HelloWorldRoutes from 'src/app/hello-world/routes';
 import CoreRoutes from 'src/app/core/routes';
 import CommonRoutes from 'src/app/common/routes';
 import MaterialRoutes from 'src/app/material/routes';
+import ExamplesRoutes from 'src/app/examples/routes';
 
 interface MyRoute {
   path: string;
@@ -22,6 +23,7 @@ interface MyRoute {
 export class HomeIndexComponent {
   routesByParentPath: Map<string, Routes> = new Map([
     ['hello-world', HelloWorldRoutes],
+    ['examples', ExamplesRoutes],
     ['core', CoreRoutes],
     ['common', CommonRoutes],
     ['material', MaterialRoutes],
