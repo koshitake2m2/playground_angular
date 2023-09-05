@@ -13,10 +13,20 @@ import {
   Validator,
 } from '@angular/forms';
 import { CustomModule } from 'src/app/share/custom.module';
+import { CustomForm001SubTodo } from '../core-control-value-accessor-sample001.component';
 
 // Form
 type SubTodosFormArray = FormArray<SubTodoFormGroup>;
-type SubTodoFormGroup = FormGroup<{ name: FormControl<string> }>;
+type SubTodoFormGroup = FormGroup<{
+  name: FormControl<string>;
+  prefix: FormControl<string>;
+  suffix: FormControl<string>;
+}>;
+type SubTodoFormData = {
+  name: string;
+  prefix: string;
+  suffix: string;
+};
 
 @Component({
   selector: 'app-sub-todos-form',
@@ -47,14 +57,38 @@ export class SubTodosFormComponent
     throw new Error('Method not implemented.');
   }
 
+  private toFormDatas(subTodos: CustomForm001SubTodo[]): SubTodoFormData[] {
+    return subTodos.map((subTodo) => {
+      const [prefix, name, suffix] = subTodo.name.split('_');
+      return {
+        prefix,
+        name,
+        suffix,
+      };
+    });
+  }
+
+  private toSubTodos(fds: SubTodoFormData[]): CustomForm001SubTodo[] {
+    return fds.map((fd) => {
+      return {
+        name: `${fd.prefix}_${fd.name}_${fd.suffix}`,
+      };
+    });
+  }
+
   //////////////
   // ControlValueAccessor
   //////////////
-  writeValue(obj: any): void {
-    throw new Error('Method not implemented.');
+
+  // 親から渡されるcontrolをこのコンポーネントのformに反映する
+  writeValue(obj: CustomForm001SubTodo[]): void {
+    this.form.setValue(this.toFormDatas(obj));
   }
-  registerOnChange(fn: any): void {
-    throw new Error('Method not implemented.');
+  // このコンポーネントのformの値を親に伝える
+  registerOnChange(fn: (v: CustomForm001SubTodo[]) => void): void {
+    this.form.valueChanges.subscribe((values) =>
+      fn(this.toSubTodos(values as SubTodoFormData[]))
+    );
   }
   registerOnTouched(fn: any): void {
     throw new Error('Method not implemented.');
