@@ -20,7 +20,7 @@ export class LoginFormComponent {
 
   onSubmit(): void {
     const { email, password } = this.form.value;
-    if (email === 'admin' && password === 'pass') {
+    if (email === 'admin@example.com' && password === 'pass') {
       this.router.navigateByUrl('/examples/examples001/loggedin-home');
     }
   }

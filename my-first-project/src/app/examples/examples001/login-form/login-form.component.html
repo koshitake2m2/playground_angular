@@ -3,11 +3,12 @@
 <form [formGroup]="form" (submit)="onSubmit()">
   <div class="form-group">
     <label for="email">Email</label>
-    <input type="email" class="form-control" id="email" formControlName="email" placeholder="Email">
+    <input type="email" class="form-control" id="email" formControlName="email" placeholder="Email" data-testid="email-input">
   </div>
   <div class="form-group">
     <label for="password">Password</label>
-    <input type="password" class="form-control" id="password" formControlName="password" placeholder="Password">
+    <input type="password" class="form-control" id="password" formControlName="password" placeholder="Password"
+    data-testid="password-input">
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-primary" data-testid="login-button">Login</button>
 </form>
