@@ -33,3 +33,7 @@ ng update @angular-eslint/builder @angular-eslint/schematics --force
 
 - standaloneで何をimportsすればいいか困った時
   - @angular/materialなら該当componentのAPIページにModule書いてある
+
+## references
+- [Experiment Jest Builder Angular 17 Play](https://www.danywalls.com/play-with-jest-builder-for-angular-17-experimental?source=more_series_bottom_blogs)
+
