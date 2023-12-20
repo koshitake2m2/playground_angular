@@ -1,17 +1,17 @@
 <h1>child works!</h1>
 <h2>count</h2>
 <p>count: {{count}}</p>
-<button (click)="incrementCountByOutput.emit('world! @Output')">increment: @Output</button>
-<button (click)="incrementCountByInput('world! @Input')">increment: @Input</button>
+<button (click)="incrementCountByOutput.emit('world! @Output')">increment: &#64;Output</button>
+<button (click)="incrementCountByInput('world! @Input')">increment: &#64;Input</button>
 <button (click)="incrementCountByChild()">increment: child</button>
 
 <h2>countState</h2>
 <p>countState: {{countState.state}}</p>
 <p>get countState: {{getCountState}}</p>
-<button (click)="incrementCountStateByOutput.emit()">increment: @Output</button>
-<button (click)="incrementCountStateByInput()">increment: @Input</button>
+<button (click)="incrementCountStateByOutput.emit()">increment: &#64;Output</button>
+<button (click)="incrementCountStateByInput()">increment: &#64;Input</button>
 <button (click)="incrementCountStateByChild()">increment: child</button>
 
 <h2>multi args</h2>
 check console.log!!
-<button (click)="logMultiMessage.emit({ a: 'hello', b: 'world'})">logMultiMessage: @Output</button>
+<button (click)="logMultiMessage.emit({ a: 'hello', b: 'world'})">logMultiMessage: &#64;Output</button>
